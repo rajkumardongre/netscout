@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+
+	<body>
+		<div class="ticketContainer">
+			<div class="ticket">
+				<div class="ticketTitle">Bus Ticket</div>
+				<hr />
+				<div class="ticketDetail">
+					<div>Time: <%= time.toLocaleDateString() %>, <%= time.toLocaleTimeString() %></div>
+					<div>From: <%= from %></div>
+					<div>To: <%= to %></div>
+					<div>Rs: 50</div>
+				</div>
+				<div class="ticketRip">
+					<div class="circleLeft"></div>
+					<div class="ripLine"></div>
+					<div class="circleRight"></div>
+				</div>
+				<div class="ticketSubDetail">
+					<div class="code">LO-2314XXX</div>
+					<!-- <div class="date">Jan 14<sup>th</sup> 2023</div> -->
+				</div>
+				<a href="/bus/conductor" class="button button2">Exit</a>
+			</div>
+			<div class="ticketShadow"></div>
+		</div>
+	</body>
+</html>

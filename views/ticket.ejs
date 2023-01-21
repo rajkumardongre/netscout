@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ticket Generator</title>
+		<link rel="stylesheet" href="/style2.css" />
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<form action="/bus/ticket/add/63cbfd902c34a6184c5b3957" method="post">
+			<div>
+				<h1 class="heading">Ticket Generator</h1>
+				<div class="elem-group">
+					<label for="name">From</label>
+					<!-- <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required> -->
+					<select id="name" name="from">
+                        <% for(let i=0; i<bus.stations.length; i++) {%>
+                            <option value="<%= bus.stations[i].name %>" ><%= bus.stations[i].name %></option>
+                        <% } %>
+					</select>
+				</div>
+				<div class="elem-group">
+					<label for="email">To</label>
+					<select id="name" name="to">
+                        <% for(let i=0; i < bus.stations.length; i++) { %>
+                            <option value="<%= bus.stations[i].name %>" > <%= bus.stations[i].name %> </option>
+                        <% } %>
+					</select>
+				</div>
+
+				<div class="elem-group inlined">
+					<label for="child">No. of passenger</label>
+					<input type="number" id="child" name="noOfPeople" placeholder="" min="0" required />
+				</div>
+			</div>
+			<button type="submit">Book Ticket</button>
+		</form>
+	</body>
+</html>
