@@ -99,10 +99,16 @@ const getcurrentStatus = async (req, res) => {
 	res.render('user', { totalPeople, currLocation, time, nextLoc, start: bus[0].start, end: bus[0].end });
 };
 
+const datavisualization = async(req,res) => {
+	res.redirect("http://localhost:8501/");
+}
+
+
 module.exports = {
 	addBus,
 	addTicket,
 	getTotalPeople,
 	getcurrentStatus,
 	showBus,
+	datavisualization,
 };
