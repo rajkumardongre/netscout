@@ -33,6 +33,10 @@ mongoose
 	.catch((err) => console.log(err));
 
 app.use('/bus', busRoute);
+
+app.use('/', (req, res) => {
+	res.redirect('/bus/status');
+});
 // app.get('/user', (req, res) => {
 // 	res.render('user');
 // });

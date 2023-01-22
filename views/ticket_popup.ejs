@@ -8,15 +8,15 @@
 		<link rel="stylesheet" href="/style.css" />
 	</head>
 
-	<body>
-		<div class="ticketContainer">
+	<body style="background-color: #495057">
+		<div class="ticketContainer" style="text-align: center">
 			<div class="ticket">
 				<div class="ticketTitle">Bus Ticket</div>
 				<hr />
 				<div class="ticketDetail">
-					<div>Time: <%= time.toLocaleDateString() %>, <%= time.toLocaleTimeString() %></div>
-					<div>From: <%= from %></div>
-					<div>To: <%= to %></div>
+					<div style="font-weight: bold"><%= time.toLocaleDateString() %>, <%= time.toLocaleTimeString() %></div>
+					<div>From: <span style="font-weight: bold"><%= from %></span></div>
+					<div>To: <span style="font-weight: bold"><%= to %></span></div>
 					<div>Rs: 50</div>
 				</div>
 				<div class="ticketRip">
@@ -24,11 +24,22 @@
 					<div class="ripLine"></div>
 					<div class="circleRight"></div>
 				</div>
-				<div class="ticketSubDetail">
+				<div class="ticketSubDetail" style="display: flex; flex-direction: column; justify-content: space-between">
 					<div class="code">LO-2314XXX</div>
 					<!-- <div class="date">Jan 14<sup>th</sup> 2023</div> -->
+					<a
+						href="/bus/conductor"
+						style="
+							padding: 0.5rem;
+							margin-top: 1rem;
+							background-color: #495057;
+							color: aliceblue;
+							text-decoration: none;
+							border-radius: 1rem;
+						"
+						>Confirm</a
+					>
 				</div>
-				<a href="/bus/conductor" class="button button2">Exit</a>
 			</div>
 			<div class="ticketShadow"></div>
 		</div>
